@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mxd.</title>
+    <meta name="description"
+        content="Portfolio of mxd, a developer specializing in Helix Framework plugins for Garry's Mod">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <div class="loading-screen">
+        <div class="loader">
+            <div class="loader-text">mxd<span>.</span></div>
+            <div class="progress-container">
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="progress-text">0%</div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <a href="#home">mxd<span>.</span></a>
+        </div>
+        <nav class="desktop-nav">
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#plugins">Plugins</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <i class="fas fa-sun active"></i>
+            <i class="fas fa-moon"></i>
+        </div>
+        <div class="mobile-menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <nav class="mobile-nav">
+        <ul>
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#plugins">Plugins</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-social">
+            <a href="https://discord.gg/JsTA8sEtYQ" target="_blank"><i class="fab fa-discord"></i></a>
+            <a href="https://github.com/mixvd" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://steamcommunity.com/id/mixed10e" target="_blank"><i class="fab fa-steam"></i></a>
+            <a href="https://www.gmodstore.com/users/mxd/reputation" target="_blank"><i class="fas fa-store"></i></a>
+        </div>
+    </nav>
+
+    <div class="particles-container">
+        <div id="particles"></div>
+    </div>
+
+    <main>
+        <section id="home" class="active">
+            <div class="container">
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1>Helix <span>Developer</span></h1>
+                        <p>Crafting innovative and high-quality plugins for Garry's Mod since 2012.</p>
+                        <div class="hero-cta">
+                            <a href="#plugins" class="btn primary">View My Work</a>
+                            <a href="#contact" class="btn secondary">Get In Touch</a>
+                        </div>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <span class="number">10+</span>
+                            <span class="label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">20+</span>
+                            <span class="label">Custom Plugins</span>
+                        </div>
+                        <div class="stat">
+                            <span class="number">3+</span>
+                            <span class="label">Frameworks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </section>
+
+        <section id="plugins">
+            <div class="container">
+                <div class="section-header">
+                    <h2>My <span>Plugins</span></h2>
+                    <p>A showcase of my work for the Helix Framework in Garry's Mod</p>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="filter-btn active" data-filter="all">All Plugins</button>
+                    <button class="filter-btn" data-filter="private">Private</button>
+                    <button class="filter-btn" data-filter="public">Public</button>
+                    <button class="filter-btn" data-filter="for-sale">For Sale</button>
+                </div>
+
+                <div class="plugins-grid">
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/guild_system.png')">
+                            <video poster="assets/img/thumbnails/guild_system.png" muted>
+                                <source src="assets/video/guildsystem.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Guild System</h3>
+                            <p>A complete guild system for your servers and players.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="guild_system">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="private">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/gambling_machine.png')">
+                            <video poster="assets/img/thumbnails/gambling_machine.png" muted>
+                                <source src="assets/video/gambling_machine_resonance.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Gambling Machine</h3>
+                            <p>A complete gambling machine made for RESONANCE. NETWORKS.</p>
+                            <a href="#" class="view-details" data-plugin="gambling_machine">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/bol_system.png')">
+                            <video poster="assets/img/thumbnails/bol_system.png" muted>
+                                <source src="assets/video/bolsystem.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>BOL System</h3>
+                            <p>A complete BOL system for your Half-Life 2 servers.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="bolsystem">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/weed_system.png')">
+                            <video poster="assets/img/thumbnails/weed_system.png" muted>
+                                <source src="assets/video/crp_weedtent.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Weed System</h3>
+                            <p>A complete weed system with tent and grow system.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="crp_weedtent">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/ranks.png')">
+                            <video poster="assets/img/thumbnails/ranks.png" muted>
+                                <source src="assets/video/ranks.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Ranks System</h3>
+                            <p>Define ranks for your server and assign them to players.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="ranks">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="private">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/discord_integration.png')">
+                            <video poster="assets/img/thumbnails/discord_integration.png" muted>
+                                <source src="assets/video/oocdiscord_logsreqwest.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Discord Integration</h3>
+                            <p>Integrate your server with Discord, with OOC between Discord and the server and more.</p>
+                            <a href="#" class="view-details" data-plugin="discord_integration">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/bags_category.png')">
+                            <video poster="assets/img/thumbnails/bags_category.png" muted>
+                                <source src="assets/video/bagscategory.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Bags Category</h3>
+                            <p>Define category for bags to put specific items in them.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="bags_category">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/laundry.png')">
+                            <video poster="assets/img/thumbnails/laundry.png" muted>
+                                <source src="assets/video/laundry.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Laundry System</h3>
+                            <p>A comprehensive system for laundering clothes.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="laundry">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/flyer.png')">
+                            <video poster="assets/img/thumbnails/flyer.png" muted>
+                                <source src="assets/video/flyer.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Flyer</h3>
+                            <p>Create and distribute custom flyers in-game for your servers.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="flyer">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/advanced_forcefield.png')">
+                            <video poster="assets/img/thumbnails/advanced_forcefield.png" muted>
+                                <source src="assets/video/advforcefield.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Advanced Forcefield</h3>
+                            <p>Sophisticated forcefield system with customizable parameters.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="advforcefield">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/cooking.png')">
+                            <video poster="assets/img/thumbnails/cooking.png" muted>
+                                <source src="assets/video/cooking.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Cooking System</h3>
+                            <p>Create and cook recipes with custom ingredients.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="cooking">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/lootbox.png')">
+                            <video poster="assets/img/thumbnails/lootbox.png" muted>
+                                <source src="assets/video/lootbox.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Lootbox</h3>
+                            <p>Customizable lootbox system with probability-based rewards.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="lootbox">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="private">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/reshade.png')">
+                            <video poster="assets/img/thumbnails/reshade.png" muted>
+                                <source src="assets/video/reshade.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>ReShade</h3>
+                            <p>In-game graphics enhancement with customizable parameters.</p>
+                            <a href="#" class="view-details" data-plugin="reshade">View Details</a>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/tying_overhaul.png')">
+                            <video poster="assets/img/thumbnails/tying_overhaul.png" muted>
+                                <source src="assets/video/tyingoverhaul.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Tying Overhauled</h3>
+                            <p>Enhanced restraint system with advanced features.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="tyingoverhaul">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/resistance_locker.png')">
+                            <video poster="assets/img/thumbnails/resistance_locker.png" muted>
+                                <source src="assets/video/resistancelocker.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Resistance Locker</h3>
+                            <p>Uniform switching system for resistance factions.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="resistancelocker">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/medical_system.png')">
+                            <video poster="assets/img/thumbnails/medical_system.png" muted>
+                                <source src="assets/video/advmedicalsys.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Medical System</h3>
+                            <p>Complex medical simulation with injuries and treatments.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="advmedical">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/wiretap.png')">
+                            <video poster="assets/img/thumbnails/wiretap.png" muted>
+                                <source src="assets/video/wiretap.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Wiretap</h3>
+                            <p>Advanced surveillance system with monitoring capabilities.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="wiretaps">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/serial_number.png')">
+                            <video poster="assets/img/thumbnails/serial_number.png" muted>
+                                <source src="assets/video/serial_number.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Serial Number</h3>
+                            <p>Weapon tracking system with forensic capabilities.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="serial-number">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/npc_drop_config.png')">
+                            <video poster="assets/img/thumbnails/npc_drop_config.png" muted>
+                                <source src="assets/video/npc_drop_config_menu.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>NPC Drop Config Menu</h3>
+                            <p>In-game interface for configuring NPC loot drops.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="npc-menu">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/gathering_system.png')">
+                            <video poster="assets/img/thumbnails/gathering_system.png" muted>
+                                <source src="assets/video/woodrock_mining.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Gathering</h3>
+                            <p>Resource collection system with respawning nodes.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="gathering">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/medal_system.png')">
+                            <video poster="assets/img/thumbnails/medal_system.png" muted>
+                                <source src="assets/video/medal_system.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Medal System</h3>
+                            <p>Achievement and recognition system with visual badges.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="medal-system">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/door_class_group.png')">
+                            <video poster="assets/img/thumbnails/door_class_group.png" muted>
+                                <source src="assets/video/doorclassgroup.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Door Class Group</h3>
+                            <p>Advanced door access control based on class groups.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="doorclass">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="for-sale">
+                        <div class="plugin-preview" style="background-image: url('assets/img/thumbnails/airdrop.png')">
+                            <video poster="assets/img/thumbnails/airdrop.png" muted>
+                                <source src="assets/video/airdrop.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Airdrop</h3>
+                            <p>Scheduled supply drops at designated locations.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="airdrop">View Details</a>
+                                <a href="#" class="buy-now">Buy Now</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="public">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/cinematic_menu.png')">
+                            <video poster="assets/img/thumbnails/cinematic_menu.png" muted>
+                                <source src="assets/video/cinematic_menu.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Cinematic Menu</h3>
+                            <p>Interface for creating immersive cinematics for your servers.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="cinematic-menu">View Details</a>
+                                <a href="https://github.com/mixvd/helix-plugins" class="get-it">Get It</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="public">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/slot_machine.png')">
+                            <video poster="assets/img/thumbnails/slot_machine.png" muted>
+                                <source src="assets/video/slot_machine.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Slot Machine</h3>
+                            <p>Fully functional gambling machine with customizable odds.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="slot-machine">View Details</a>
+                                <a href="https://github.com/mixvd/helix-plugins" class="get-it">Get It</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plugin-card" data-category="public">
+                        <div class="plugin-preview"
+                            style="background-image: url('assets/img/thumbnails/broken_glass.png')">
+                            <video poster="assets/img/thumbnails/broken_glass.png" muted>
+                                <source src="assets/video/broken_glass.mp4" type="video/mp4">
+                            </video>
+                            <div class="play-btn"><i class="fas fa-play"></i></div>
+                        </div>
+                        <div class="plugin-info">
+                            <h3>Broken Glass</h3>
+                            <p>Environmental enhancement for City 8: Definitive Edition.</p>
+                            <div class="plugin-actions">
+                                <a href="#" class="view-details" data-plugin="broken-glass">View Details</a>
+                                <a href="https://github.com/mixvd/helix-plugins" class="get-it">Get It</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About <span>Me</span></h2>
+                    <p>My journey and expertise in Garry's Mod development</p>
+                </div>
+
+                <div class="about-content">
+                    <div class="about-text">
+                        <p class="lead-text">I've been a passionate developer since childhood, specializing in creating
+                            innovative
+                            solutions for Garry's Mod since 2012.</p>
+
+                        <div class="expertise">
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="expertise-details">
+                                    <h3>Framework Experience</h3>
+                                    <p>Extensive experience with Helix, Nutscript, and Clockwork frameworks.</p>
+                                </div>
+                            </div>
+
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-laptop-code"></i>
+                                </div>
+                                <div class="expertise-details">
+                                    <h3>Development Skills</h3>
+                                    <p>Proficient in both frontend and backend development, creating seamless user
+                                        experiences.</p>
+                                </div>
+                            </div>
+
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="expertise-details">
+                                    <h3>Innovation</h3>
+                                    <p>Constantly exploring new techniques and approaches to enhance gameplay mechanics.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="expertise-item">
+                                <div class="expertise-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <div class="expertise-details">
+                                    <h3>Community Contribution</h3>
+                                    <p>Active member of the Garry's Mod development community, creating and sharing
+                                        solutions since 2012.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <p>My goal is to create plugins that not only function flawlessly but also enhance the
+                            roleplaying experience with intuitive interfaces and immersive features.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Contact <span>Me</span></h2>
+                    <p>Interested in working together? Get in touch!</p>
+                </div>
+
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-discord"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Discord</h3>
+                                <p>mixvd</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <p>mxd.dev.contact@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-store"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GmodStore</h3>
+                                <a href="https://www.gmodstore.com/users/mxd/reputation" target="_blank">View
+                                    Profile</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-steam"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Steam</h3>
+                                <a href="https://steamcommunity.com/id/mixed10e" target="_blank">View Profile</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">mxd<span>.</span></a>
+                </div>
+                <div class="social-links">
+                    <a href="https://discord.gg/JsTA8sEtYQ" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://github.com/mixvd" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://steamcommunity.com/id/mixed10e" target="_blank"><i class="fab fa-steam"></i></a>
+                    <a href="https://www.gmodstore.com/users/mxd/reputation" target="_blank"><i
+                            class="fas fa-store"></i></a>
+                </div>
+                <p>&copy; 2025 mxd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h3>Plugin Title</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-video-container">
+                    <video controls poster="" muted>
+                        <source src="" type="video/mp4">
+                    </video>
+                </div>
+                <div class="modal-description">
+                    <p>Plugin description will appear here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="purchase-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-header">
+                <h3>Purchase Plugin</h3>
+            </div>
+            <div class="modal-body">
+                <div class="purchase-details">
+                    <div class="purchase-plugin-name">
+                        <h4>Plugin: <span class="plugin-name">Plugin Name</span></h4>
+                    </div>
+                    <div class="purchase-price">
+                        <p>Price: <span class="plugin-price">$XX.XX</span></p>
+                    </div>
+                    <div class="purchase-info">
+                        <p>To purchase this plugin, please contact me through one of the following methods:</p>
+                        <ul class="contact-methods">
+                            <li><i class="fab fa-discord"></i> Discord: mixvd</li>
+                            <li><i class="fas fa-envelope"></i> Email: mxd.dev.contact@gmail.com</li>
+                        </ul>
+                        <p class="purchase-note">Please mention the plugin name in your message. I'll get back to you
+                            with payment details and provide the plugin once the transaction is complete.</p>
+                    </div>
+                    <div class="purchase-actions">
+                        <a href="#contact" class="btn primary contact-btn">Contact Me</a>
+                        <button class="btn secondary close-modal-btn">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
