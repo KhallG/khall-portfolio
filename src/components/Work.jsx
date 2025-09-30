@@ -6,6 +6,14 @@ export default function Work() {
   const [activeTab, setActiveTab] = React.useState("projects");
   const data = activeTab === "projects" ? projects : plugins;
 
+  if (!Array.isArray(data) || data.length === 0) {
+    return (
+      <div style={{ textAlign: "center", padding: "2rem", color: "red" }}>
+        ⚠️ Aucun contenu trouvé pour {activeTab}.
+      </div>
+    );
+  }
+
   return (
     <div className="projects-wrapper">
       {/* Tabs */}
@@ -28,10 +36,16 @@ export default function Work() {
       <div className="projects-grid">
         {data.map((item, index) => (
           <div className="project-card" key={index}>
-            <img src={item.image} alt={item.title} className="project-img" />
+            {item.image && (
+              <img
+                src={item.image}
+                alt={item.title || "Project"}
+                className="project-img"
+              />
+            )}
             <div className="project-content">
-              <h3>{item.title}</h3>
-              <p>{item.description}</p>
+              <h3>{item.title || "Untitled"}</h3>
+              <p>{item.description || "No description available."}</p>
               {item.link && (
                 <a
                   href={item.link}
