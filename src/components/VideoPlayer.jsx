@@ -1,23 +1,28 @@
 import React, { useEffect } from "react";
+import ReactDOM from "react-dom";
 import ReactPlayer from "react-player";
 
 export default function VideoPlayer({ videoUrl, onClose }) {
   useEffect(() => {
+    document.body.style.overflow = "hidden";
     const handleKeyDown = (e) => {
       if (e.key === "Escape") {
         onClose();
       }
     };
     window.addEventListener("keydown", handleKeyDown);
-    return () => window.removeEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = "auto";
+      window.removeEventListener("keydown", handleKeyDown);
+    };
   }, [onClose]);
 
-  return (
+  const content = (
     <div className="video-overlay" onClick={onClose}>
-      <div className="video-container" onClick={(e) => e.stopPropagation()}>
-        <button className="close-btn" onClick={onClose}>✖</button>
+      <div className="video-popup" onClick={(e) => e.stopPropagation()}>
         <ReactPlayer
-          url={videoUrl}
+          src={videoUrl}
           playing
           controls
           width="100%"
@@ -26,4 +31,6 @@ export default function VideoPlayer({ videoUrl, onClose }) {
       </div>
     </div>
   );
+
+  return ReactDOM.createPortal(content, document.body);
 }

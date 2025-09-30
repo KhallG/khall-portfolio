@@ -8,7 +8,8 @@ export default function Contact() {
           Let's <span>Work Together</span>
         </h2>
         <p className="contact-intro">
-          Want to collaborate or need a custom plugin for your server? Reach out via the links below.
+          For now, I am not available for collaborations.  
+          If you have questions or just want to reach out, you can contact me through the links below.
         </p>
         <div className="contact-grid">
           <div className="contact-item">
