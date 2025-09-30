@@ -2,7 +2,8 @@ const plugins = [
   {
     title: "Combine Fabricator",
     description: "A Half-Life: Alyx inspired machine that allows Combine units to create weapons, ammunition, and equipment.",
-    image: "../assets/image/inventory.png"
+    image: "../assets/image/inventory.png",
+    video: "https://www.youtube.com/watch?v=ZH9Naj9w8uA"
   },
   {
     title: "Infestation Control",
