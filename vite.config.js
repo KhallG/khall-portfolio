@@ -6,5 +6,6 @@ export default defineConfig({
   base: "/khall-portfolio/",
   build: {
     outDir: "docs",
+    emptyOutDir: true
   },
 });
