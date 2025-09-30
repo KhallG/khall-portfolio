@@ -9,22 +9,13 @@ export function usePageEffects() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("visible");
-          } else {
-            entry.target.classList.remove("visible");
           }
         });
       },
-      { threshold: 0.3 }
+      { threshold: 0.15 }
     );
 
-    sections.forEach((el) => {
-      if (el.id === "work") {
-        el.classList.add("visible");
-      } else {
-        el.classList.remove("visible");
-      }
-      observer.observe(el);
-    });
+    sections.forEach((el) => observer.observe(el));
 
     return () => observer.disconnect();
   }, []);
@@ -71,11 +62,24 @@ export function usePageEffects() {
     const anchors = document.querySelectorAll('a[href^="#"]');
     const handler = (e) => {
       e.preventDefault();
-      const target = document.querySelector(e.currentTarget.getAttribute("href"));
+      const href = e.currentTarget.getAttribute("href");
+      const target = document.querySelector(href);
+      
       if (target) {
-        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        target.classList.add("visible");
+        
+        const isMobile = window.innerWidth <= 768;
+        const offset = isMobile ? 70 : 80;
+        
+        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
+        
+        window.scrollTo({
+          top: targetPosition,
+          behavior: "smooth"
+        });
       }
     };
+    
     anchors.forEach((a) => a.addEventListener("click", handler));
     return () => anchors.forEach((a) => a.removeEventListener("click", handler));
   }, []);
@@ -88,35 +92,34 @@ export function usePageEffects() {
   }, []);
 
   useEffect(() => {
-    const links = document.querySelectorAll(".nav-links a");
-    const handler = function () {
-      links.forEach((l) => l.classList.remove("active"));
-      this.classList.add("active");
-    };
-    links.forEach((l) => l.addEventListener("click", handler));
-    return () => links.forEach((l) => l.removeEventListener("click", handler));
-  }, []);
-
-  useEffect(() => {
     const sections = document.querySelectorAll("section[id]");
-    const navLinks = document.querySelectorAll(".nav-links a");
+    const navLinks = document.querySelectorAll(".nav-links a, .mobile-menu a");
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            navLinks.forEach((link) => link.classList.remove("active"));
-            const activeLink = document.querySelector(
-              `.nav-links a[href="#${entry.target.id}"]`
-            );
-            if (activeLink) activeLink.classList.add("active");
-          }
-        });
-      },
-      { threshold: 0.5, rootMargin: "-20% 0px -20% 0px" }
-    );
+    const updateActiveLink = () => {
+      const scrollPosition = window.scrollY + 150;
 
-    sections.forEach((s) => observer.observe(s));
-    return () => observer.disconnect();
+      let currentSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.offsetHeight;
+
+        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+          currentSection = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${currentSection}`) {
+          link.classList.add("active");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", updateActiveLink);
+    updateActiveLink();
+
+    return () => window.removeEventListener("scroll", updateActiveLink);
   }, []);
 }

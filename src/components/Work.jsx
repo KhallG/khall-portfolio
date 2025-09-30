@@ -12,39 +12,45 @@ export default function Work() {
 
   return (
     <section id="work" className="section">
-      <div className="container projects-wrapper">
-        <h2 className="section-title">
-          Featured <span>Projects</span>
-        </h2>
-
-        {/* Tabs */}
-        <div className="projects-tabs">
-          <button
-            className={`tab ${activeTab === "projects" ? "active" : ""}`}
-            onClick={() => setActiveTab("projects")}
-          >
-            Projects
-          </button>
-          <button
-            className={`tab ${activeTab === "plugins" ? "active" : ""}`}
-            onClick={() => setActiveTab("plugins")}
-          >
-            Addons & Plugins
-          </button>
+      <div className="container">
+        <div className="work-header">
+          <h2 className="section-title">
+            Code &<span> Projects</span>
+          </h2>
+          
+          <div className="category-switch">
+            <div className={`switch-bg ${activeTab}`}></div>
+            <button
+              className={`switch-btn ${activeTab === "projects" ? "active" : ""}`}
+              onClick={() => setActiveTab("projects")}
+            >
+              <i className="fas fa-code"></i>
+              <span>Projects</span>
+              <div className="count">{projects.length}</div>
+            </button>
+            <button
+              className={`switch-btn ${activeTab === "plugins" ? "active" : ""}`}
+              onClick={() => setActiveTab("plugins")}
+            >
+              <i className="fas fa-puzzle-piece"></i>
+              <span>Plugins</span>
+              <div className="count">{plugins.length}</div>
+            </button>
+          </div>
         </div>
 
-        {/* Grid */}
-        <div className="projects-grid">
-          {data.map((item, index) => (
-            <ProjectCard
-              key={index}
-              {...item}
-              onVideoClick={(video) => setActiveVideo(video)}
-            />
-          ))}
+        <div className="projects-container">
+          <div className={`projects-grid fade-in ${activeTab}`}>
+            {data.map((item, index) => (
+              <ProjectCard
+                key={`${activeTab}-${index}`}
+                {...item}
+                onVideoClick={(video) => setActiveVideo(video)}
+              />
+            ))}
+          </div>
         </div>
 
-        {/* Popup Video */}
         {activeVideo && (
           <VideoPlayer
             videoUrl={activeVideo}
