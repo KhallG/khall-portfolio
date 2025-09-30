@@ -3,5 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/khall-portoflio/",
+  base: "/khall-portfolio/",
+  build: {
+    outDir: "docs",
+  },
 });
