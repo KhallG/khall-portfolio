@@ -2,17 +2,20 @@ const projects = [
   {
     title: "Project: Résonance HL:A - 2025",
     description: "Development & systems inspired by Half-Life: Alyx, adapted for immersive Garry's Mod roleplay.",
+    icon: "assets/image/hla.png",
     link: "https://discord.gg/zYwx7xvPaD",
     linkname: "Discord",
   }, 
   {
     title: "Résonance Network - 2025",
     description: "Founder & lead developer of the Resonance Network, creating advanced and immersive servers for Garry's Mod.",
+    icon: "assets/image/resonance_network.png",
     link: "https://github.com/RESONANCE-NETWORK"
   },
   {
     title: "Project: Résonance SCP - 2025",
     description: "A complete SCP-oriented framework for Helix, featuring containment mechanics, security systems, and events.",
+    icon: "assets/image/scp.png",
     link: "https://discord.gg/9cTrYNh7mt",
     linkname: "Discord",
   },

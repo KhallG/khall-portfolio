@@ -9,6 +9,7 @@ export default function ProjectCard({
   link, 
   linkname, 
   category, 
+  icon, 
   onVideoClick
 }) {
   const handleCardClick = (e) => {
@@ -22,12 +23,13 @@ export default function ProjectCard({
         links,
         link,
         linkname,
-        category
+        category,
+        icon
       });
     }
   };
 
-  const iconClass =
+  const defaultIcon =
     category === "projects"
       ? "fa-solid fa-globe watermark"
       : category === "plugins"
@@ -41,7 +43,15 @@ export default function ProjectCard({
       style={{ cursor: video ? "pointer" : "default" }}
     >
       <div className="project-icon">
-        <i className={iconClass}></i>
+        {icon ? (
+          icon.endsWith(".png") || icon.endsWith(".jpg") || icon.endsWith(".svg") ? (
+            <img src={icon} alt={title} className="icon-img watermark" />
+          ) : (
+            <i className={`${icon} watermark`}></i>
+          )
+        ) : (
+          <i className={defaultIcon}></i>
+        )}
       </div>
 
       {video && (
