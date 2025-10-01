@@ -21,41 +21,45 @@ export function usePageEffects() {
   }, []);
 
   useEffect(() => {
-    const container = document.querySelector(".rotating-text");
+    const container = document.querySelector(".rotating-text .typed-word");
     if (!container) return;
 
-    const words = Array.from(container.querySelectorAll(".word"));
-    if (words.length <= 1) return;
-
-    words.forEach((w, i) => {
-      w.classList.toggle("is-visible", i === 0);
-      w.classList.toggle("is-hidden", i !== 0);
-    });
-
+    const words = ["Modern", "Minimal", "Efficient", "Elegant"];
     let idx = 0;
-    const HOLD = 2200;
-    const FADE = 350;
+    let charIdx = 0;
+    let isDeleting = false;
+    let current = "";
+    const SPEED = 60;
+    const PAUSE = 1500;
 
-    const interval = setInterval(() => {
-      const current = words[idx];
-      const nextIdx = (idx + 1) % words.length;
-      const next = words[nextIdx];
+    const type = () => {
+      const word = words[idx];
 
-      next.classList.remove("is-hidden");
-      next.classList.add("is-visible");
+      if (isDeleting) {
+        charIdx--;
+        current = word.substring(0, charIdx);
+      } else {
+        charIdx++;
+        current = word.substring(0, charIdx);
+      }
 
-      current.classList.remove("is-visible");
-      current.classList.add("is-out");
+      container.textContent = current;
 
-      setTimeout(() => {
-        current.classList.remove("is-out");
-        current.classList.add("is-hidden");
-      }, FADE);
+      let delay = SPEED;
 
-      idx = nextIdx;
-    }, HOLD);
+      if (!isDeleting && charIdx === word.length) {
+        delay = PAUSE;
+        isDeleting = true;
+      } else if (isDeleting && charIdx === 0) {
+        isDeleting = false;
+        idx = (idx + 1) % words.length;
+        delay = 400;
+      }
 
-    return () => clearInterval(interval);
+      setTimeout(type, delay);
+    };
+
+    type();
   }, []);
 
   useEffect(() => {

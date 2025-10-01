@@ -6,7 +6,10 @@ const plugins = [
       It allows units to manufacture authorized weapons, ammunition, and specialized Combine equipment using resin tubes as a core resource.
       <br><br>Featuring the ported model by <a href="https://steamcommunity.com/profiles/76561198981346192/" target="_blank" rel="noopener noreferrer">@Tohey</a>, 
       it comes complete with all the authentic animations and sounds from the game.`,
-    video: "https://www.youtube.com/watch?v=ZH9Naj9w8uA",
+    media: [
+      { type: 'video', src: "https://www.youtube.com/watch?v=ZH9Naj9w8uA" },
+      { type: 'image', src: "https://media.discordapp.net/attachments/567765409252638913/1418189001491222599/image.png?ex=68df032e&is=68ddb1ae&hm=d9b3d58b77a0e7e185099d7a7e3ae1cb96f0639d61ed85306b4da6f10e1d84f6&=&format=webp&quality=lossless&width=1523&height=856" }
+    ],
     links: [
       {
         url: "https://www.youtube.com/@resoproject",

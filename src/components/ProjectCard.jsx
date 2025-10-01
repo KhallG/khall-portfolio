@@ -4,7 +4,9 @@ export default function ProjectCard({
   title, 
   shortDescription, 
   detailedDescription, 
-  video, 
+  video,
+  image,
+  media,
   links, 
   link, 
   linkname, 
@@ -13,13 +15,15 @@ export default function ProjectCard({
   onVideoClick
 }) {
   const handleCardClick = (e) => {
-    if (video) {
+    if (video || image || (media && media.length > 0)) {
       e.preventDefault();
       onVideoClick({
         title,
         shortDescription,
         detailedDescription,
         video,
+        image,
+        media,
         links,
         link,
         linkname,
@@ -36,11 +40,13 @@ export default function ProjectCard({
       ? "fa-solid fa-code watermark"
       : "fa-solid fa-folder-open watermark";
 
+  const hasMedia = video || image || (media && media.length > 0);
+
   return (
     <div
-      className={`project-card ${video ? "has-video" : ""}`}
+      className={`project-card ${hasMedia ? "has-video" : ""}`}
       onClick={handleCardClick}
-      style={{ cursor: video ? "pointer" : "default" }}
+      style={{ cursor: hasMedia ? "pointer" : "default" }}
     >
       <div className="project-icon">
         {icon ? (
@@ -54,7 +60,7 @@ export default function ProjectCard({
         )}
       </div>
 
-      {video && (
+      {hasMedia && (
         <div className="play-overlay">
           <i className="fa-solid fa-play"></i>
         </div>

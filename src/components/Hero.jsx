@@ -5,11 +5,9 @@ export default function Hero() {
     <section id="home" className="hero fullpage">
       <div className="container hero-container">
         <h1 className="hero-title">
-          Crafting{" "}
+          Coding{" "}
           <span className="accent rotating-text">
-            <span className="word is-visible">Unique</span>
-            <span className="word is-hidden">Immersive</span>
-            <span className="word is-hidden">Futuristic</span>
+            <span className="typed-word"></span>
           </span>{" "}
           Experiences
         </h1>
