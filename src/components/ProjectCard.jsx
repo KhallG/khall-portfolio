@@ -2,17 +2,28 @@ import React from "react";
 
 export default function ProjectCard({ 
   title, 
-  description, 
+  shortDescription, 
+  detailedDescription, 
+  video, 
+  links, 
   link, 
   linkname, 
-  video, 
-  onVideoClick, 
-  category 
+  category, 
+  onVideoClick
 }) {
   const handleCardClick = (e) => {
     if (video) {
       e.preventDefault();
-      onVideoClick(video);
+      onVideoClick({
+        title,
+        shortDescription,
+        detailedDescription,
+        video,
+        links,
+        link,
+        linkname,
+        category
+      });
     }
   };
 
@@ -41,7 +52,7 @@ export default function ProjectCard({
 
       <div className="project-content">
         <h3>{title}</h3>
-        <p>{description}</p>
+        <p>{shortDescription}</p>
         {link && (
           <a
             href={link}

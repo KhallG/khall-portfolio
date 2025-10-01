@@ -46,7 +46,7 @@ export default function Work() {
                 key={`${activeTab}-${index}`}
                 {...item}
                 category={activeTab} 
-                onVideoClick={(video) => setActiveVideo(video)}
+                onVideoClick={(videoData) => setActiveVideo(videoData)}
               />
             ))}
           </div>
@@ -54,7 +54,7 @@ export default function Work() {
 
         {activeVideo && (
           <VideoPlayer
-            videoUrl={activeVideo}
+            videoData={activeVideo}
             onClose={() => setActiveVideo(null)}
           />
         )}
