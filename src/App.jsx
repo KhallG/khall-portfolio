@@ -1,12 +1,12 @@
 import React from "react";
-import NeonGrid from "./components/Neongrid";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import About from "./components/About";
-import Work from "./components/Work";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
-import { usePageEffects } from "./hooks/usePageEffects";
+import NeonGrid from "src/components/Neongrid";
+import Navbar from "src/components/Navbar";
+import Hero from "src/components/Hero";
+import About from "src/components/About";
+import Work from "src/components/Work";
+import Contact from "src/components/Contact";
+import Footer from "src/components/Footer";
+import { usePageEffects } from "src/hooks/usePageEffects";
 
 export default function App() {
   usePageEffects();
