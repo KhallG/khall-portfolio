@@ -1,5 +1,5 @@
 import React from "react";
-import NeonGrid from "./components/Neongrid";
+import NeonGrid from "./components/NeonGrid";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import About from "./components/About";
