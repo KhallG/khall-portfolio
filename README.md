@@ -1,62 +1,52 @@
-KhallG Portfolio
+# 🚀 KhallG — Portfolio
 
-Bienvenue sur mon portfolio en ligne — une vitrine de mes projets, compétences et explorations créatives.
-Découvrez-le ici : khallg.github.io/khall-portfolio
+✨ Explore my immersive development work through my **online portfolio**:  
+👉 [khallg.github.io/khall-portfolio](https://khallg.github.io/khall-portfolio/)
 
-🔧 À propos
+---
 
-Je suis Khall, développeur passionné par les frameworks Helix, les expériences immersives et la création de scripts RP innovants pour Garry’s Mod.
-Ce portfolio regroupe mes meilleurs travaux, des projets en cours aux concepts audacieux — tous réalisés avec soin, dans l’optique de repousser les limites du roleplay.
+## 📌 Overview
 
-📂 Structure
+My portfolio showcases my work around **immersive roleplay development** for **Garry’s Mod** and creative projects:  
+- 🔹 **Complete Projects**: frameworks, servers, roleplay concepts  
+- 🔹 **Plugins & Systems**: unique gameplay, innovative mechanics  
+- 🔹 **Multimedia Showcases**: videos, images, demos  
+- 🔹 **Info & Contact**: about me, my skills, and useful links  
 
-Projets : grille visuelle de projets avec aperçu, média (vidéos / images) et descriptions détaillées
+---
 
-Plugins / Systèmes : modules techniques (forcefields, zombies, gaz, etc.) avec démonstrations et logique
+## 🛠️ Tech Stack
 
-À propos : mon histoire, mes compétences, mes intérêts
+![React](https://img.shields.io/badge/-React-61DBFB?logo=react&logoColor=black&style=for-the-badge)
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=for-the-badge)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=for-the-badge)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7E017?logo=javascript&logoColor=black&style=for-the-badge)
+![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-181717?logo=github&logoColor=white&style=for-the-badge)
 
-Contact : liens directs pour me joindre
+---
 
-🚀 Fonctionnalités clés
+## 🎥 Features
 
-Lecteur multimédia intégré : vidéos YouTube, MP4, images embarquées
+- 🎬 **Integrated media player**: YouTube, MP4, and local videos  
+- 🎨 **Modern animations**: neon glow, smooth transitions, typewriter effect  
+- 📱 **Responsive design**: fully optimized for mobile & desktop  
+- 🖼️ **Immersive media popup** with navigation  
+- 💡 **Rich descriptions** (HTML supported: links, bold text, line breaks)
 
-Descriptions en HTML enrichi : balises <strong>, <a> & sauts de ligne supportés
+---
 
-Navigation fluide entre projets avec overlay / popup média
+## 🌌 Roadmap
 
-Effets visuels modernes : transitions, flous, néons, textes animés
+- 🔜 Adding more projects & servers  
+- 🌙 Dark Mode  
+- 🌍 Multilingual support (EN / FR)  
+- 🎶 Ambient audio integration  
 
-Responsive / adaptatif pour mobile / desktop
+---
 
-📌 Technologies
+## 📣 Contact
 
-React + React Hooks
+💬 Find all my links and contact info directly on my portfolio:  
+👉 [khallg.github.io/khall-portfolio](https://khallg.github.io/khall-portfolio/)
 
-HTML / CSS (modèles, flexbox, gradients, animations)
-
-react-player pour lecture de vidéos externes
-
-CSS modernes (backdrop-filter, variables, animations)
-
-GitHub Pages pour hébergement
-
-🔮 Ce qui arrive
-
-Ajout de nouveaux projets & plugins
-
-Améliorations ergonomiques (dark mode, filtres, tri)
-
-Intégration audio / sons immersifs
-
-Version multilingue (FR / EN)
-
-📣 Me contacter
-
-Discord / GitHub : via lien dans la page
-
-Porte ouverte à collaborations, idées d’extension, feedback technique
-
-Merci de visiter mon espace. Que l’exploration soit immersive !
-— Khall
+---
