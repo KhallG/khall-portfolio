@@ -24,7 +24,7 @@ export default function Work() {
               className={`switch-btn ${activeTab === "projects" ? "active" : ""}`}
               onClick={() => setActiveTab("projects")}
             >
-              <i className="fas fa-code"></i>
+              <i className="fas fa-solid fa-globe"></i>
               <span>Projects</span>
               <div className="count">{projects.length}</div>
             </button>
@@ -32,7 +32,7 @@ export default function Work() {
               className={`switch-btn ${activeTab === "plugins" ? "active" : ""}`}
               onClick={() => setActiveTab("plugins")}
             >
-              <i className="fas fa-puzzle-piece"></i>
+              <i className="fas fa-solid fa-code"></i>
               <span>Plugins</span>
               <div className="count">{plugins.length}</div>
             </button>
@@ -45,6 +45,7 @@ export default function Work() {
               <ProjectCard
                 key={`${activeTab}-${index}`}
                 {...item}
+                category={activeTab} 
                 onVideoClick={(video) => setActiveVideo(video)}
               />
             ))}

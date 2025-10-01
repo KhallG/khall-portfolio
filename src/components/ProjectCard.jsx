@@ -1,12 +1,27 @@
 import React from "react";
 
-export default function ProjectCard({ title, description, link, linkname, video, onVideoClick }) {
+export default function ProjectCard({ 
+  title, 
+  description, 
+  link, 
+  linkname, 
+  video, 
+  onVideoClick, 
+  category 
+}) {
   const handleCardClick = (e) => {
     if (video) {
       e.preventDefault();
       onVideoClick(video);
     }
   };
+
+  const iconClass =
+    category === "projects"
+      ? "fa-solid fa-globe watermark"
+      : category === "plugins"
+      ? "fa-solid fa-code watermark"
+      : "fa-solid fa-folder-open watermark";
 
   return (
     <div
@@ -15,8 +30,9 @@ export default function ProjectCard({ title, description, link, linkname, video,
       style={{ cursor: video ? "pointer" : "default" }}
     >
       <div className="project-icon">
-        <i className="fa-solid fa-folder-open watermark"></i>
+        <i className={iconClass}></i>
       </div>
+
       {video && (
         <div className="play-overlay">
           <i className="fa-solid fa-play"></i>
@@ -41,4 +57,3 @@ export default function ProjectCard({ title, description, link, linkname, video,
     </div>
   );
 }
-
