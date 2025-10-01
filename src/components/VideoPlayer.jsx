@@ -55,7 +55,9 @@ export default function VideoPlayer({ videoData, onClose }) {
             config={{
               youtube: {
                 playerVars: {
-                  origin: window.location.origin
+                  origin: window.location.origin,
+                  modestbranding: 1,
+                  rel: 0
                 }
               }
             }}
