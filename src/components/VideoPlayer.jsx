@@ -46,7 +46,20 @@ export default function VideoPlayer({ videoData, onClose }) {
         </button>
 
         <div className="video-container">
-          <ReactPlayer src={video} playing controls width="100%" height="100%" />
+          <ReactPlayer
+            src={video}
+            playing
+            controls
+            width="100%"
+            height="100%"
+            config={{
+              youtube: {
+                playerVars: {
+                  origin: window.location.origin
+                }
+              }
+            }}
+          />
         </div>
 
         <div className="video-popup-content">
