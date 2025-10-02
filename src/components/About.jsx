@@ -25,7 +25,6 @@ export default function About() {
               </div>
             </div>
 
-            {/* Description avec balises HTML supportées */}
             <div
               className="about-description"
               dangerouslySetInnerHTML={{ __html: t("about.description") }}
@@ -53,7 +52,6 @@ export default function About() {
                 <i className="fas fa-code"></i>
               </div>
               <h4>Lua</h4>
-              <p>{t("about.skills.lua")}</p>
             </div>
 
             <div className="skill-card">
@@ -61,7 +59,6 @@ export default function About() {
                 <i className="fas fa-cogs"></i>
               </div>
               <h4>Helix Framework</h4>
-              <p>{t("about.skills.helix")}</p>
             </div>
 
             <div className="skill-card">
@@ -69,7 +66,6 @@ export default function About() {
                 <i className="fas fa-gamepad"></i>
               </div>
               <h4>{t("about.skills.gameplayTitle")}</h4>
-              <p>{t("about.skills.gameplay")}</p>
             </div>
 
             <div className="skill-card">
@@ -77,7 +73,6 @@ export default function About() {
                 <i className="fas fa-palette"></i>
               </div>
               <h4>UI / UX</h4>
-              <p>{t("about.skills.uiux")}</p>
             </div>
 
             <div className="skill-card">
@@ -85,7 +80,6 @@ export default function About() {
                 <i className="fas fa-users"></i>
               </div>
               <h4>{t("about.skills.communityTitle")}</h4>
-              <p>{t("about.skills.community")}</p>
             </div>
           </div>
         </div>

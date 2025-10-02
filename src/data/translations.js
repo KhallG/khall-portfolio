@@ -35,13 +35,8 @@ export const translations = {
         servers: "Servers Currently in Development",
       },
       skills: {
-        lua: "Advanced scripting",
-        helix: "Custom systems",
-        gameplayTitle: "Gameplay Systems",
-        gameplay: "Immersive mechanics",
-        uiux: "Modern interfaces",
-        communityTitle: "Community Tools",
-        community: "Player engagement",
+        gameplayTitle: "Systems & Mechanics",
+        communityTitle: "Ease-of-Use Systems",
       },
     },
 
@@ -266,13 +261,8 @@ export const translations = {
         servers: "Serveurs actuellement en développement",
       },
       skills: {
-        lua: "Scripts avancés",
-        helix: "Systèmes personnalisés",
-        gameplayTitle: "Systèmes de jeu",
-        gameplay: "Mécaniques immersives",
-        uiux: "Interfaces modernes",
-        communityTitle: "Outils communautaires",
-        community: "Engagement des joueurs",
+        gameplayTitle: "Systèmes & Mécaniques",
+        communityTitle: "Outils Intuitifs",
       },
     },
 
