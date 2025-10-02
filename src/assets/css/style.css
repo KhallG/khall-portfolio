@@ -73,6 +73,32 @@ body {
   transform: rotateY(180deg);
 }
 
+.lang-overlay {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  backdrop-filter: blur(20px);
+  z-index: 999999;
+  animation: langSlide 0.8s ease forwards;
+  box-shadow: 0 0 60px var(--accent), 0 0 120px var(--accent-dark);
+}
+@keyframes langSlide {
+  0% {
+    left: -100%;
+  }
+  40% {
+    left: 0;
+  }
+  60% {
+    left: 0;
+  }
+  100% {
+    left: 100%;
+  }
+}
 
 /* === FOND DYNAMIQUE GRILLE NÉON === */
 #neon-grid {

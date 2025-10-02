@@ -1,14 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import ReactPlayer from "react-player";
+import { useLang } from "../LanguageContext";
 
 export default function VideoPlayer({ videoData, onClose }) {
   const [isClosing, setIsClosing] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const { media, video, image, title, shortDescription, detailedDescription, links } = videoData;
+  const { t } = useLang();
 
-  // Créer un tableau de médias à partir des props
-  const mediaItems = media || (video ? [{ type: 'video', src: video }] : image ? [{ type: 'image', src: image }] : []);
+  const { keyName, media, video, image, title, shortDescription, detailedDescription, links, category } = videoData;
+  const translated = keyName
+    ? {
+        title: t(`${category || "projects"}.${keyName}.title`),
+        shortDescription: t(`${category || "projects"}.${keyName}.shortDescription`),
+        detailedDescription: t(`${category || "projects"}.${keyName}.detailedDescription`),
+        links: links?.map((l, i) => ({
+          label: t(`${category || "projects"}.${keyName}.linkLabel${i+1}`) || l.label,
+        })),
+      }
+    : {};
+
+  const mediaItems =
+    media || (video ? [{ type: "video", src: video }] : image ? [{ type: "image", src: image }] : []);
   const hasMultipleMedia = mediaItems.length > 1;
 
   useEffect(() => {
@@ -65,7 +78,7 @@ export default function VideoPlayer({ videoData, onClose }) {
         </button>
 
         <div className="video-container">
-          {currentMedia && currentMedia.type === 'video' ? (
+          {currentMedia && currentMedia.type === "video" ? (
             currentMedia.src.includes("youtube.com") || currentMedia.src.includes("youtu.be") ? (
               <ReactPlayer
                 src={currentMedia.src}
@@ -78,9 +91,9 @@ export default function VideoPlayer({ videoData, onClose }) {
                     playerVars: {
                       origin: window.location.origin,
                       modestbranding: 1,
-                      rel: 0
-                    }
-                  }
+                      rel: 0,
+                    },
+                  },
                 }}
               />
             ) : (
@@ -89,15 +102,15 @@ export default function VideoPlayer({ videoData, onClose }) {
                 src={currentMedia.src}
                 controls
                 autoPlay
-                style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                style={{ width: "100%", height: "100%", objectFit: "contain" }}
               />
             )
-          ) : currentMedia && currentMedia.type === 'image' ? (
+          ) : currentMedia && currentMedia.type === "image" ? (
             <img
               key={currentIndex}
               src={currentMedia.src}
               alt={`Media ${currentIndex + 1}`}
-              style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+              style={{ width: "100%", height: "100%", objectFit: "contain" }}
             />
           ) : null}
         </div>
@@ -116,7 +129,7 @@ export default function VideoPlayer({ videoData, onClose }) {
               {mediaItems.map((_, index) => (
                 <button
                   key={index}
-                  className={`media-dot ${index === currentIndex ? 'active' : ''}`}
+                  className={`media-dot ${index === currentIndex ? "active" : ""}`}
                   onClick={() => setCurrentIndex(index)}
                   aria-label={`Go to media ${index + 1}`}
                 />
@@ -134,14 +147,18 @@ export default function VideoPlayer({ videoData, onClose }) {
         )}
 
         <div className="video-popup-content">
-          <h2>{title}</h2>
-          {detailedDescription ? (
+          <h2>{translated.title || title}</h2>
+          {translated.detailedDescription || detailedDescription ? (
             <p
               style={{ marginTop: "1rem", fontSize: "1rem", color: "#bbb" }}
-              dangerouslySetInnerHTML={{ __html: detailedDescription }}
+              dangerouslySetInnerHTML={{
+                __html: translated.detailedDescription || detailedDescription,
+              }}
             />
           ) : (
-            shortDescription && <p>{shortDescription}</p>
+            (translated.shortDescription || shortDescription) && (
+              <p>{translated.shortDescription || shortDescription}</p>
+            )
           )}
 
           {links && links.length > 0 && (
@@ -155,7 +172,7 @@ export default function VideoPlayer({ videoData, onClose }) {
                   className="btn primary"
                 >
                   <i className="fa-solid fa-external-link-alt" style={{ marginRight: "8px" }}></i>
-                  {l.label}
+                  {translated.links?.[i]?.label || l.label}
                 </a>
               ))}
             </div>

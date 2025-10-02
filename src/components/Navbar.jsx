@@ -5,13 +5,16 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [flipping, setFlipping] = useState(false);
   const { lang, setLang, t } = useLang();
+  const [showOverlay, setShowOverlay] = useState(false);
 
   const toggleLang = () => {
-    setFlipping(true);
+    setShowOverlay(true);
     setTimeout(() => {
       setLang(lang === "fr" ? "en" : "fr");
-      setFlipping(false);
-    }, 250);
+    }, 400);
+    setTimeout(() => {
+      setShowOverlay(false);
+    }, 800);
   };
 
   const nextFlagUrl =
@@ -26,7 +29,7 @@ export default function Navbar() {
           <a href="#home">
             <div className="logo-text-wrapper">
               <span className="logo-text">Khall</span>
-              <span className="logo-sub">Developer & Creator</span>
+              <span className="logo-sub">{t("navbar.subtitle")}</span>
             </div>
           </a>
         </div>
@@ -77,6 +80,7 @@ export default function Navbar() {
           </a>
         </nav>
       </div>
+      {showOverlay && <div className="lang-overlay"></div>}
     </header>
   );
 }

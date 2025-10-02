@@ -2,6 +2,7 @@ import React from "react";
 import { useLang } from "../LanguageContext";
 
 export default function ProjectCard({ 
+  itemKey,
   title, 
   shortDescription, 
   detailedDescription, 
@@ -17,19 +18,31 @@ export default function ProjectCard({
 }) {
   const { t } = useLang();
 
+  const translated = itemKey
+    ? {
+        title: t(`${category}.${itemKey}.title`),
+        shortDescription: t(`${category}.${itemKey}.shortDescription`),
+        detailedDescription: t(`${category}.${itemKey}.detailedDescription`),
+        linkname: t(`${category}.${itemKey}.linkname`),
+      }
+    : {};
+
   const handleCardClick = (e) => {
     if (video || image || (media && media.length > 0)) {
       e.preventDefault();
       onVideoClick({
-        title,
-        shortDescription,
-        detailedDescription,
+        title: translated?.title || title,
+        shortDescription: translated?.shortDescription || shortDescription,
+        detailedDescription: translated?.detailedDescription || detailedDescription,
         video,
         image,
         media,
-        links,
+        links: links?.map((l, i) => ({
+          ...l,
+          label: t(`${category}.${itemKey}.linkLabel${i+1}`) || l.label
+        })),
         link,
-        linkname,
+        linkname: translated?.linkname || linkname,
         category,
         icon
       });
@@ -54,7 +67,11 @@ export default function ProjectCard({
       <div className="project-icon">
         {icon ? (
           icon.endsWith(".png") || icon.endsWith(".jpg") || icon.endsWith(".svg") ? (
-            <img src={icon} alt={title} className="icon-img watermark" />
+            <img 
+              src={icon} 
+              alt={translated?.title || title} 
+              className="icon-img watermark" 
+            />
           ) : (
             <i className={`${icon} watermark`}></i>
           )
@@ -70,8 +87,8 @@ export default function ProjectCard({
       )}
 
       <div className="project-content">
-        <h3>{title}</h3>
-        <p>{shortDescription}</p>
+        <h3>{translated?.title || title}</h3>
+        <p>{translated?.shortDescription || shortDescription}</p>
         {link && (
           <a
             href={link}
@@ -80,7 +97,7 @@ export default function ProjectCard({
             className="btn small"
             onClick={(e) => e.stopPropagation()}
           >
-            {linkname ? linkname : t("projects.learnMore")}
+            {translated?.linkname || linkname || t("projects.learnMore")}
           </a>
         )}
       </div>
