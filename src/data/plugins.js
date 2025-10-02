@@ -1,4 +1,3 @@
-// plugins.js
 const plugins = [
   {
     key: "combineFabricator",
