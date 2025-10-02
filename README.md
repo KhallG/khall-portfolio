@@ -38,7 +38,6 @@ My portfolio showcases my work around **immersive roleplay development** for **G
 ## 🌌 Roadmap
 
 - 🔜 Adding more projects & servers  
-- 🌍 Multilingual support (EN / FR)  
 
 ---
 
