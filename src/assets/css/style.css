@@ -33,6 +33,47 @@ body {
   color: var(--accent);
 }
 
+/* Bouton Langue */
+.lang-switch {
+  margin-left: 1rem;
+  width: 48px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  perspective: 600px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.lang-switch:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent);
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px var(--shadow);
+}
+
+.lang-flag {
+  width: 28px;
+  height: 20px;
+  background-size: cover;
+  border-radius: 4px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s ease;
+  box-shadow: 0 0 6px rgba(0,0,0,0.4);
+}
+
+.lang-switch.flipping .lang-flag {
+  transform: rotateY(180deg);
+}
+
+
 /* === FOND DYNAMIQUE GRILLE NÉON === */
 #neon-grid {
   position: fixed;

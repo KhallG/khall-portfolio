@@ -1,7 +1,23 @@
 import React, { useState } from "react";
+import { useLang } from "../LanguageContext";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [flipping, setFlipping] = useState(false);
+  const { lang, setLang, t } = useLang();
+
+  const toggleLang = () => {
+    setFlipping(true);
+    setTimeout(() => {
+      setLang(lang === "fr" ? "en" : "fr");
+      setFlipping(false);
+    }, 250);
+  };
+
+  const nextFlagUrl =
+    lang === "fr"
+      ? "https://flagcdn.com/fr.svg"
+      : "https://flagcdn.com/us.svg";
 
   return (
     <header className="navbar glass">
@@ -16,11 +32,22 @@ export default function Navbar() {
         </div>
 
         <nav className="nav-links desktop-only">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#work">Code & Projects</a>
-          <a href="#contact">Contact</a>
+          <a href="#home">{t("navbar.home")}</a>
+          <a href="#about">{t("navbar.about")}</a>
+          <a href="#work">{t("navbar.work")}</a>
+          <a href="#contact">{t("navbar.contact")}</a>
         </nav>
+
+        <button
+          onClick={toggleLang}
+          className={`lang-switch ${flipping ? "flipping" : ""}`}
+          aria-label="Switch language"
+        >
+          <div
+            className="lang-flag"
+            style={{ backgroundImage: `url(${nextFlagUrl})` }}
+          ></div>
+        </button>
 
         <button
           className={`burger ${menuOpen ? "active" : ""}`}
@@ -34,12 +61,20 @@ export default function Navbar() {
       </div>
 
       <div className={`mobile-menu ${menuOpen ? "open" : ""}`}>
-        <div className="mobile-menu-header">Navigation</div>
+        <div className="mobile-menu-header">{t("navbar.navigation")}</div>
         <nav>
-          <a href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-          <a href="#about" onClick={() => setMenuOpen(false)}>About</a>
-          <a href="#work" onClick={() => setMenuOpen(false)}>Code & Projects</a>
-          <a href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+          <a href="#home" onClick={() => setMenuOpen(false)}>
+            {t("navbar.home")}
+          </a>
+          <a href="#about" onClick={() => setMenuOpen(false)}>
+            {t("navbar.about")}
+          </a>
+          <a href="#work" onClick={() => setMenuOpen(false)}>
+            {t("navbar.work")}
+          </a>
+          <a href="#contact" onClick={() => setMenuOpen(false)}>
+            {t("navbar.contact")}
+          </a>
         </nav>
       </div>
     </header>

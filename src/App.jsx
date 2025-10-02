@@ -7,9 +7,11 @@ import Work from "./components/Work";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import { usePageEffects } from "./hooks/usePageEffects";
+import { useLang } from "./LanguageContext";
 
 export default function App() {
-  usePageEffects();
+  const { lang } = useLang();
+  usePageEffects(lang);
 
   return (
     <>

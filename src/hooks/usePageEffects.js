@@ -1,6 +1,7 @@
 import { useEffect } from "react";
+import { translations } from "../data/translations";
 
-export function usePageEffects() {
+export function usePageEffects(lang = "en") {
   useEffect(() => {
     const sections = document.querySelectorAll(".section");
 
@@ -16,7 +17,6 @@ export function usePageEffects() {
     );
 
     sections.forEach((el) => observer.observe(el));
-
     return () => observer.disconnect();
   }, []);
 
@@ -24,7 +24,7 @@ export function usePageEffects() {
     const container = document.querySelector(".rotating-text .typed-word");
     if (!container) return;
 
-    const words = ["Modern", "Minimal", "Efficient", "Elegant"];
+    const words = translations[lang]?.hero?.rotatingWords || [];
     let idx = 0;
     let charIdx = 0;
     let isDeleting = false;
@@ -46,7 +46,6 @@ export function usePageEffects() {
       container.textContent = current;
 
       let delay = SPEED;
-
       if (!isDeleting && charIdx === word.length) {
         delay = PAUSE;
         isDeleting = true;
@@ -60,7 +59,7 @@ export function usePageEffects() {
     };
 
     type();
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     const anchors = document.querySelectorAll('a[href^="#"]');
@@ -68,22 +67,20 @@ export function usePageEffects() {
       e.preventDefault();
       const href = e.currentTarget.getAttribute("href");
       const target = document.querySelector(href);
-      
+
       if (target) {
         target.classList.add("visible");
-        
+
         const isMobile = window.innerWidth <= 768;
         const offset = isMobile ? 70 : 80;
-        
-        const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-        
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth"
-        });
+
+        const targetPosition =
+          target.getBoundingClientRect().top + window.pageYOffset - offset;
+
+        window.scrollTo({ top: targetPosition, behavior: "smooth" });
       }
     };
-    
+
     anchors.forEach((a) => a.addEventListener("click", handler));
     return () => anchors.forEach((a) => a.removeEventListener("click", handler));
   }, []);
@@ -101,14 +98,15 @@ export function usePageEffects() {
 
     const updateActiveLink = () => {
       const scrollPosition = window.scrollY + 150;
-
       let currentSection = "";
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
         const sectionHeight = section.offsetHeight;
-
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+        if (
+          scrollPosition >= sectionTop &&
+          scrollPosition < sectionTop + sectionHeight
+        ) {
           currentSection = section.getAttribute("id");
         }
       });
@@ -123,7 +121,6 @@ export function usePageEffects() {
 
     window.addEventListener("scroll", updateActiveLink);
     updateActiveLink();
-
     return () => window.removeEventListener("scroll", updateActiveLink);
   }, []);
 }

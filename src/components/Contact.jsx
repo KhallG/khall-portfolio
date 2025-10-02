@@ -1,32 +1,37 @@
 import React from "react";
+import { useLang } from "../LanguageContext";
 
 export default function Contact() {
+  const { t } = useLang();
+
   return (
     <section id="contact" className="section contact-section fullpage">
       <div className="container contact-container">
         <h2 className="section-title">
-          Get In <span>Touch</span>
+          {t("contact.title")} <span>{t("contact.subtitle")}</span>
         </h2>
 
         <div className="contact-content">
           <div className="contact-status-card">
             <div className="status-indicator">
               <div className="status-dot unavailable"></div>
-              <span>Currently Unavailable</span>
+              <span>{t("contact.status.unavailable")}</span>
             </div>
-            <p className="status-message">
-              I'm not taking on new collaborations at the moment, but feel free to reach out 
-              if you have questions or just want to connect.
-            </p>
+            <p className="status-message">{t("contact.status.message")}</p>
           </div>
 
           <div className="contact-methods">
-            <a href="https://discord.com/users/khall___" target="_blank" rel="noopener noreferrer" className="contact-card discord">
+            <a
+              href="https://discord.com/users/khall___"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card discord"
+            >
               <div className="contact-card-icon">
                 <i className="fa-brands fa-discord"></i>
               </div>
               <div className="contact-card-content">
-                <h4>Discord</h4>
+                <h4>{t("contact.methods.discord")}</h4>
                 <p>khall___</p>
               </div>
               <div className="contact-card-arrow">
@@ -39,7 +44,7 @@ export default function Contact() {
                 <i className="fa-solid fa-envelope"></i>
               </div>
               <div className="contact-card-content">
-                <h4>Email</h4>
+                <h4>{t("contact.methods.email")}</h4>
                 <p>khalldevg@gmail.com</p>
               </div>
               <div className="contact-card-arrow">
@@ -47,12 +52,17 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href="https://github.com/KhallG" target="_blank" rel="noopener noreferrer" className="contact-card github">
+            <a
+              href="https://github.com/KhallG"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card github"
+            >
               <div className="contact-card-icon">
                 <i className="fa-brands fa-github"></i>
               </div>
               <div className="contact-card-content">
-                <h4>GitHub</h4>
+                <h4>{t("contact.methods.github")}</h4>
                 <p>github.com/KhallG</p>
               </div>
               <div className="contact-card-arrow">
@@ -60,12 +70,17 @@ export default function Contact() {
               </div>
             </a>
 
-            <a href="https://steamcommunity.com/profiles/76561198174252822/" target="_blank" rel="noopener noreferrer" className="contact-card steam">
+            <a
+              href="https://steamcommunity.com/profiles/76561198174252822/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="contact-card steam"
+            >
               <div className="contact-card-icon">
                 <i className="fa-brands fa-steam"></i>
               </div>
               <div className="contact-card-content">
-                <h4>Steam</h4>
+                <h4>{t("contact.methods.steam")}</h4>
                 <p>Khall</p>
               </div>
               <div className="contact-card-arrow">

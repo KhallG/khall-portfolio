@@ -1,4 +1,5 @@
 import React from "react";
+import { useLang } from "../LanguageContext";
 
 export default function ProjectCard({ 
   title, 
@@ -14,6 +15,8 @@ export default function ProjectCard({
   icon, 
   onVideoClick
 }) {
+  const { t } = useLang();
+
   const handleCardClick = (e) => {
     if (video || image || (media && media.length > 0)) {
       e.preventDefault();
@@ -77,7 +80,7 @@ export default function ProjectCard({
             className="btn small"
             onClick={(e) => e.stopPropagation()}
           >
-            {linkname ? linkname : "Learn More"}
+            {linkname ? linkname : t("projects.learnMore")}
           </a>
         )}
       </div>
