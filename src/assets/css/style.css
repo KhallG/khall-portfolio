@@ -1510,6 +1510,58 @@ body {
   background: #ff4569;
 }
 
+/* === NEW BADGE === */
+.new-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 3;
+  background: linear-gradient(135deg, #ff1744 0%, #f50057 100%);
+  padding: 6px 12px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 23, 68, 0.6);
+  animation: newBadgePulse 2s ease-in-out infinite;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.new-badge span {
+  font-size: 0.75rem;
+  font-weight: 900;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.new-badge-glow {
+  position: absolute;
+  inset: -4px;
+  background: linear-gradient(135deg, #ff1744 0%, #f50057 100%);
+  border-radius: 22px;
+  opacity: 0.5;
+  filter: blur(8px);
+  z-index: -1;
+  animation: newBadgeGlow 2s ease-in-out infinite;
+}
+
+@keyframes newBadgePulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes newBadgeGlow {
+  0%, 100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
 /* === FOOTER === */
 footer {
   text-align: center;

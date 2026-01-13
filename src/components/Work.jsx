@@ -11,8 +11,6 @@ export default function Work() {
   const { t } = useLang();
 
   const data = activeTab === "projects" ? projects : plugins;
-
-  // Découper la traduction du titre en deux parties (avant & après le span)
   const workTitle = t("navbar.work").split(" & ");
 
   return (

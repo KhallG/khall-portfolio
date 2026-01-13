@@ -13,7 +13,8 @@ export default function ProjectCard({
   link, 
   linkname, 
   category, 
-  icon, 
+  icon,
+  newUntil,
   onVideoClick
 }) {
   const { t } = useLang();
@@ -57,6 +58,7 @@ export default function ProjectCard({
       : "fa-solid fa-folder-open watermark";
 
   const hasMedia = video || image || (media && media.length > 0);
+  const isNew = newUntil ? new Date(newUntil) > new Date() : false;
 
   return (
     <div
@@ -64,6 +66,13 @@ export default function ProjectCard({
       onClick={handleCardClick}
       style={{ cursor: hasMedia ? "pointer" : "default" }}
     >
+      {isNew && (
+        <div className="new-badge">
+          <span>NEW</span>
+          <div className="new-badge-glow"></div>
+        </div>
+      )}
+
       <div className="project-icon">
         {icon ? (
           icon.endsWith(".png") || icon.endsWith(".jpg") || icon.endsWith(".svg") ? (
