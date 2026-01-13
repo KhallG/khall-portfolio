@@ -119,9 +119,9 @@ export const translations = {
       charCreatorSCP: {
         title: "SCP Character Creator",
         shortDescription: "An immersive character creation system for SCP RP servers.",
-        detailedDescription: `The <strong>SCP Character Creator</strong> is an immersive system that allows players to create and customize their characters in SCP RP servers.
+        detailedDescription: `The <strong>SCP Character Creator</strong> is an immersive system that allows players to create and customize their characters in our SCP RP server.
         <br><br>
-        With an intuitive interface, players can choose from a variety of customization options, including appearance, tattoos, to create a unique character.
+        With an intuitive interface, players can choose from a variety of customization options, including appearance and tattoos, to create a unique character.
         <br><br>
         The system is designed to be easy to use while offering depth of customization, allowing players to fully immerse themselves in their role within the SCP Foundation.`,
         linkLabel1: "See more on Youtube"
@@ -365,9 +365,9 @@ export const translations = {
       charCreatorSCP: {
         title: "Créateur de Personnages SCP",
         shortDescription: "Un système de création de personnages immersif pour les serveurs SCP RP.",
-        detailedDescription: `Le <strong>Créateur de Personnages SCP</strong> est un système immersif permettant aux joueurs de créer et personnaliser leurs personnages dans les serveurs SCP RP.  
+        detailedDescription: `Le <strong>Créateur de Personnages SCP</strong> est un système immersif permettant aux joueurs de créer et personnaliser leurs personnages dans notre serveur SCP RP.  
         <br><br>
-        Avec une interface intuitive, les joueurs peuvent choisir parmi une variété d'options de personnalisation, y compris l'apparence, tatouages, pour créer un personnage unique.
+        Avec une interface intuitive, les joueurs peuvent choisir parmi une variété d'options de personnalisation, y compris l'apparence & tatouages, pour créer un personnage unique.
         <br><br>
         Le système est conçu pour être facile à utiliser tout en offrant une profondeur de personnalisation, permettant aux joueurs de s'immerger pleinement dans leur rôle au sein de la Fondation SCP.`,
         linkLabel1: "Voir plus sur Youtube"
