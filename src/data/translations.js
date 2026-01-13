@@ -126,6 +126,16 @@ export const translations = {
         The system is designed to be easy to use while offering depth of customization, allowing players to fully immerse themselves in their role within the SCP Foundation.`,
         linkLabel1: "See more on Youtube"
       },
+      tutorialSystemSCP: {
+        title: "SCP Tutorial System",
+        shortDescription: "An interactive tutorial system for new players on the server.",
+        detailedDescription: `The <strong>SCP Tutorial System</strong> is an interactive onboarding experience designed to help new players get acquainted with the mechanics and lore of SCP RP servers.
+        <br><br>
+        This system guides players through essential gameplay elements, ensuring they understand their roles and responsibilities within the universe.
+        <br><br>
+        By providing a structured introduction, the tutorial system enhances player engagement and immersion from the very beginning of their journey.`,
+        linkLabel1: "See more on Youtube"
+      },
       combineFabricator: {
         title: "Combine Fabricator",
         shortDescription: "A machine that allows Combine units to create weapons, ammunition, and equipment.",
@@ -360,6 +370,16 @@ export const translations = {
         Avec une interface intuitive, les joueurs peuvent choisir parmi une variété d'options de personnalisation, y compris l'apparence, tatouages, pour créer un personnage unique.
         <br><br>
         Le système est conçu pour être facile à utiliser tout en offrant une profondeur de personnalisation, permettant aux joueurs de s'immerger pleinement dans leur rôle au sein de la Fondation SCP.`,
+        linkLabel1: "Voir plus sur Youtube"
+      },
+      tutorialSystemSCP: {
+        title: "Système de Tutoriel SCP",
+        shortDescription: "Un système de tutoriel interactif pour les nouveaux joueurs sur le serveur.",
+        detailedDescription: `Le <strong>Système de Tutoriel SCP</strong> est une expérience d'intégration interactive conçue pour aider les nouveaux joueurs à se familiariser avec les mécaniques et le lore des serveurs SCP RP.
+        <br><br>
+        Ce système guide les joueurs à travers les éléments essentiels du gameplay, garantissant qu'ils comprennent leurs rôles et responsabilités au sein de l'univers.
+        <br><br>
+        En fournissant une introduction structurée, le système de tutoriel améliore l'engagement et l'immersion des joueurs dès le début de leur aventure.`,
         linkLabel1: "Voir plus sur Youtube"
       },
       combineFabricator: {

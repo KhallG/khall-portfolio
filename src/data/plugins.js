@@ -8,6 +8,14 @@ const plugins = [
     links: [{ url: "https://www.youtube.com/@resoproject", label: "linkLabel1" }]
   },
   {
+    key: "tutorialSystemSCP",
+    newUntil: "2026-01-20",
+    media: [
+      { type: 'video', src: "https://youtu.be/51QxFWj1wpc" }
+    ],
+    links: [{ url: "https://www.youtube.com/@resoproject", label: "linkLabel1" }]
+  },
+  {
     key: "combineFabricator",
     media: [
       { type: 'video', src: "https://www.youtube.com/watch?v=ZH9Naj9w8uA" },
