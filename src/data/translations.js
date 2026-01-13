@@ -41,16 +41,6 @@ export const translations = {
     },
 
     projects: {
-      charCreatorSCP: {
-        title: "SCP Character Creator",
-        shortDescription: "An immersive character creation system for SCP RP servers.",
-        detailedDescription: `The <strong>SCP Character Creator</strong> is an immersive system that allows players to create and customize their characters in SCP RP servers.
-        <br><br>
-        With an intuitive interface, players can choose from a variety of customization options, including appearance, tattoos, to create a unique character.
-        <br><br>
-        The system is designed to be easy to use while offering depth of customization, allowing players to fully immerse themselves in their role within the SCP Foundation.`,
-        linkLabel1: "See more on Youtube"
-      },
       resonanceHLA: {
         title: "Project: Résonance HL:A",
         shortDescription: "An immersive Half-Life Alyx inspired roleplay experience.",
@@ -126,6 +116,16 @@ export const translations = {
     },
 
     plugins: {
+      charCreatorSCP: {
+        title: "SCP Character Creator",
+        shortDescription: "An immersive character creation system for SCP RP servers.",
+        detailedDescription: `The <strong>SCP Character Creator</strong> is an immersive system that allows players to create and customize their characters in SCP RP servers.
+        <br><br>
+        With an intuitive interface, players can choose from a variety of customization options, including appearance, tattoos, to create a unique character.
+        <br><br>
+        The system is designed to be easy to use while offering depth of customization, allowing players to fully immerse themselves in their role within the SCP Foundation.`,
+        linkLabel1: "See more on Youtube"
+      },
       combineFabricator: {
         title: "Combine Fabricator",
         shortDescription: "A machine that allows Combine units to create weapons, ammunition, and equipment.",
