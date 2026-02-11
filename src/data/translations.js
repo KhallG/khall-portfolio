@@ -103,8 +103,11 @@ export const translations = {
       title: "Get In",
       subtitle: "Touch",
       status: {
+        available: "Currently Available",
         unavailable: "Currently Unavailable",
-        message:
+        messageAvailable:
+          "I'm currently available for commissions! Feel free to reach out via Discord or Email to discuss your project.",
+        messageUnavailable:
           "I'm not taking commissions at the moment, but feel free to reach out if you have questions or just want to connect.",
       },
       methods: {
@@ -349,8 +352,11 @@ export const translations = {
       title: "Entrer en",
       subtitle: "Contact",
       status: {
+        available: "Actuellement disponible",
         unavailable: "Actuellement indisponible",
-        message:
+        messageAvailable:
+          "Je suis actuellement disponible pour des commissions ! N'hésitez pas à me contacter via Discord ou Email pour discuter de votre projet.",
+        messageUnavailable:
           "Je ne prends pas de commissions pour le moment, mais n’hésitez pas à me contacter si vous avez des questions ou si vous souhaitez simplement échanger.",
       },
       methods: {

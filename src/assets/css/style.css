@@ -1035,6 +1035,9 @@ body {
   height: 10px;
   border-radius: 50%;
   position: relative;
+  background: #00ff88;
+  box-shadow: 0 0 10px #00ff88;
+  animation: pulse 2s ease-in-out infinite;
 }
 
 .status-dot.unavailable {
@@ -1046,11 +1049,9 @@ body {
 @keyframes pulse {
   0%, 100% {
     opacity: 1;
-    box-shadow: 0 0 10px var(--accent);
   }
   50% {
     opacity: 0.6;
-    box-shadow: 0 0 20px var(--accent);
   }
 }
 

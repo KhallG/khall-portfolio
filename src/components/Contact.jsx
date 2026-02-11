@@ -1,8 +1,10 @@
 import React from "react";
 import { useLang } from "../LanguageContext";
+import { siteConfig } from "../data/config";
 
 export default function Contact() {
   const { t } = useLang();
+  const isAvailable = siteConfig.isAvailable;
 
   return (
     <section id="contact" className="section contact-section fullpage">
@@ -14,10 +16,18 @@ export default function Contact() {
         <div className="contact-content">
           <div className="contact-status-card">
             <div className="status-indicator">
-              <div className="status-dot unavailable"></div>
-              <span>{t("contact.status.unavailable")}</span>
+              <div className={`status-dot ${isAvailable ? "" : "unavailable"}`}></div>
+              <span>
+                {isAvailable
+                  ? t("contact.status.available")
+                  : t("contact.status.unavailable")}
+              </span>
             </div>
-            <p className="status-message">{t("contact.status.message")}</p>
+            <p className="status-message">
+              {isAvailable
+                ? t("contact.status.messageAvailable")
+                : t("contact.status.messageUnavailable")}
+            </p>
           </div>
 
           <div className="contact-methods">
